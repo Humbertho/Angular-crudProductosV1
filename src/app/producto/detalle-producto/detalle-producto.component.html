@@ -1,0 +1,20 @@
+<div class="container" *ngIf="productoDetalle">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <h4>Detalle de Producto</h4>
+            <div class="card">
+                <div class="card-header">
+                  <b>{{ productoDetalle.nombre }}</b>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>ID:</b> {{ productoDetalle.id}} </li>
+                  <li class="list-group-item"><b>precio:</b>$ {{ productoDetalle.precio}}</li>
+                </ul>                
+            </div>
+            <button class="btn btn-outline-primary btn-block col-sm-12" style="margin-top: 2em;" (click)="regresar()"> 
+                <i class="fa-solid fa-chevron-left"></i> Regresar
+            </button>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
